@@ -6,6 +6,7 @@
 | email              | string  | null: false |
 | encrypted_password | string  | null: false |
 
+### 画像はActiveStorageを使用
 
 ### Association
 
