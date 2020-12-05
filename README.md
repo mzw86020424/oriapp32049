@@ -1,24 +1,41 @@
-# README
+## users テーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type    | Options     |
+| ------------------ | ------- | ----------- |
+| nickname           | string  | null: false |
+| email              | string  | null: false |
+| encrypted_password | string  | null: false |
 
-Things you may want to cover:
+### 画像はActiveStorageを使用
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :zines
+- has_many :posts
 
-* Configuration
 
-* Database creation
+## zines テーブル
 
-* Database initialization
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user_id | references | null: false, foreign_key: true |
+| release | boolean    | default: false, null: false    |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- belongs_to :user
+- has_many :posts
 
-* Deployment instructions
 
-* ...
+## posts テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| url     | text       | null: false                    |
+| user_id | references | null: false, foreign_key: true |
+| zine_id | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :zine
