@@ -1,104 +1,94 @@
-* {
+.header-3 {
   box-sizing: border-box;
+  width: 100%;
+  position: fixed;
 }
 
-.top-page-header {
-  width: 100vw;
-  padding: 2vh 15vw;
+.header-inner {
   display: flex;
-  flex-direction: column;
-}
-
-.search-bar-contents {
-  display: flex;
+  align-items: center;
   justify-content: space-between;
+  max-width: 1024px;
+  height: 60px;
+  padding: 0 0.8em;
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+#menu3 {
+  display: none;
+}
+
+.menu3 {
+  display: block;
+  width: 40px;
+  font-size: 0;
+}
+
+.menu3-1,
+.menu3-2,
+.menu3-3 {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  margin: 4px 0;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+#menu3:checked ~ .menu3-1 {
+  transform: translateY(12px) rotate(-45deg);
+}
+
+#menu3:checked ~ .menu3-2 {
+  opacity: 0;
+}
+
+#menu3:checked ~ .menu3-3 {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.header-nav {
+  display: flex;
   align-items: center;
 }
 
-.furima-icon {
-  width: 10vw;
-  margin-right: 10vw;
-}
-
-.search-form {
-  width: 65vw;
-  height: 5vh;
+.header-nav-item {
   display: flex;
-  margin-bottom: 5px;
+  align-items: center;
+  margin-left: 16px;
 }
 
-.search-form>.input-box {
-  width: 100%;
-  height: 5vh;
-  padding-left: 10px;
+.logo img {
+  width: 250px;
 }
 
-.search-button {
-  width: 5vh;
-  border: 0;
+.header-button {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0.5em 1.2em;
+  font-size: 12px;
+  text-decoration: none;
   cursor: pointer;
-  background-color: #3ccace;
-  padding: 8px;
+  user-select: none;
 }
 
-.search-icon {
-  width: 100%;
+.header-login {
+  color: #999;
 }
 
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
-
-.lists-left {
-  display: flex;
-  min-width: 200px;
-
-}
-
-.category-list {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.brand-list {
-  text-decoration: none;
-  color: #333333;
-}
-
-.lists-right {
-  display: flex;
-  list-style: none;
-  align-items: flex-end;
-}
-
-
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
+.header-signup {
   font-weight: bold;
+  color: #fff;
+  background: #00b5ad;
+  border: 1px #00b5ad solid;
+  border-radius: 3px;
 }
 
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-}
-
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: #333333;
+@media screen and (max-width: 480px) {
+  .header-post {
+    display: none;
+  }
 }

@@ -1,29 +1,23 @@
-<%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <%= link_to image_tag("furima-logo-color.png", class:"furima-icon"), "/" %>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='キーワードから探す'>
-      <button class="search-button">  
-        <%= image_tag "search.png", class:"search-icon" %>
-      </button>
-    </form>
-  </div>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
-      <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
-    </ul>
-    <ul class='lists-right'>
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-      <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
-      <% else %>
-        <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
-        <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
-      <% end %>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-    </ul>
+<header class="header">
+  <div class="header-inner">
+    <div class="header-menu" >
+      <label class="menu3">
+        <input id="menu3" type="checkbox" value="off" />
+        <label class="menu3-1" for="menu3"></label>
+        <label class="menu3-2" for="menu3"></label>
+        <label class="menu3-3" for="menu3"></label>
+      </label>
+    </div>
+    <div class="logo">
+      <%= image_tag "logo.png" %>
+    </div>
+    <nav class="header-nav">
+      <div class="header-nav-item">
+        <a class="header-button header-signup">新規登録</a>
+      </div>
+      <div class="header-nav-item">
+        <a class="header-button header-login">ログイン</a>
+      </div>
+    </nav>
   </div>
 </header>
