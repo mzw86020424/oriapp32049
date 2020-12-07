@@ -1,0 +1,69 @@
+.main-post {
+  width: 100vw;
+  background-color: blanchedalmond;
+  height: 60vh;
+}
+
+.main-post img {
+  background-color: #ccc;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-posts-container {
+  display: flex;
+}
+
+.sub-post-1 {
+  width: 50vw;
+  background-color: burlywood;
+  height: 30vh;
+}
+
+.sub-post-1 img {
+  background-color: darkslategray;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.sub-post-2 {
+  width: 50vw;
+  background-color: cadetblue;
+  height: 30vh;
+}
+
+.mini-posts-container {
+  display: flex;
+}
+
+.mini-post-1 {
+  width: 20vw;
+  background-color: coral;
+  height: 12vh;
+}
+
+.mini-post-2 {
+  width: 20vw;
+  background-color: cornflowerblue;
+  height: 12vh;
+}
+
+.mini-post-3 {
+  width: 20vw;
+  background-color: darkcyan;
+  height: 12vh;
+}
+
+.mini-post-4 {
+  width: 20vw;
+  background-color: darkgoldenrod;
+  height: 12vh;
+}
+
+.mini-post-5 {
+  width: 20vw;
+  background-color: darkseagreen;
+  height: 12vh;
+}

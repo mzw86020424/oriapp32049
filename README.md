@@ -20,8 +20,8 @@
 | ------- | ---------- | ------------------------------ |
 | user_id | references | null: false, foreign_key: true |
 | release | boolean    | default: false, null: false    |
-| year    | string     | default: false                 |
-| month   | string     | default: false                 |
+| year    | string     | null: false                    |
+| month   | string     | null: false                    |
 
 ### Association
 
