@@ -1,6 +1,9 @@
  <%= render "shared/header" %>
 <div class="post-container">
-  <div class="main-post" >main-post</div>
+  <div class="main-post" >
+    <h3></h3>
+    <a><img src=""/></a>
+  </div>
   <div class="sub-posts-container" >
     <div class="sub-post-1" >sub-post-1</div>
     <div class="sub-post-2" >sub-post-2</div>
@@ -15,16 +18,33 @@
 </div>
 
 
+    
+    <%# 以下画像埋め込み用 %>
+    <script>
+
+    const data = {
+      key: '50acd7bb8d7423296acde3ad14fdd4a2', //ご自身のAPIキーに置き換えてください
+      q: 'https://marvel.disney.co.jp/movie/avengers-endgame.html' //任意のURLで試してみてください
+    }
 
 
+    //プレビュー表示用の関数
+    const createIMG = json => {
+
+      document.querySelector('img').src = json.image;
+      // document.querySelector('h3').textContent = json.title;
+      document.querySelector('main-post').href = json.url;
+
+    }
 
 
+    //LinkPreviewを利用した通信処理
+    fetch('https://api.linkpreview.net', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify(data),
+    })
+    .then(data => data.json())
+    .then(json => createIMG(json));
 
-
-
-
-
-
-
-
-<!-- 最後にerbを入れる -->
+  </script>
