@@ -4,6 +4,13 @@
   height: 60vh;
 }
 
+.main-post img {
+  background-color: #ccc;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .sub-posts-container {
   display: flex;
 }
@@ -12,6 +19,13 @@
   width: 50vw;
   background-color: burlywood;
   height: 30vh;
+}
+
+.sub-post-1 img {
+  background-color: darkslategray;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .sub-post-2 {
