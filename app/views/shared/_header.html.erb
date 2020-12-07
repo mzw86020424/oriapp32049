@@ -13,6 +13,9 @@
     </div>
     <nav class="header-nav">
       <div class="header-nav-item">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'hover-effect_slide'%>
+      </div>
+      <div class="header-nav-item">
         <input type="text" class="form1-input" placeholder="URL" />
         <a href="#!" class="hover-effect_slide">save!</a>
       </div>
